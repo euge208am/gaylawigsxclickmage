@@ -1,0 +1,149 @@
+/* Gayla Wigs · Creative Direction
+   Fonts: IvyJournal (Adobe Fonts kit, see <head>), Helvetica, Monsieur La Doulaise (Google Fonts). */
+
+:root {
+  --ivory: #FFFEFC;
+  --pearl: #D3BFC5;
+  --mist: #D4D8DB;
+  --silver: #A8AEB4;
+  --ink: #2A2F36;
+  --mauve: #936B77;
+  --hair: rgba(42, 47, 54, 0.28);
+
+  --serif: "ivyjournal", "IvyJournal", "Cormorant Garamond", Georgia, serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --script: "Monsieur La Doulaise", cursive;
+
+  --pad: clamp(20px, 8.3vw, 120px);
+  --max: 1200px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+.wrap { width: 100%; max-width: calc(var(--max) + var(--pad) * 2); margin: 0 auto; padding: 0 var(--pad); }
+
+/* type */
+.serif { font-family: var(--serif); font-weight: 200; letter-spacing: -0.005em; }
+.script { font-family: var(--script); font-weight: 400; }
+.label { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 300; }
+.accent { color: var(--mauve); }
+.muted { color: var(--silver); }
+h1.display { font-family: var(--serif); font-weight: 200; font-size: clamp(54px, 8.4vw, 120px); line-height: 1; }
+h1.page { font-family: var(--serif); font-weight: 200; font-size: clamp(48px, 6.6vw, 96px); line-height: 1; }
+h2.section { font-family: var(--serif); font-weight: 200; font-size: clamp(36px, 3.9vw, 56px); line-height: 1.05; margin-top: 14px; }
+.lede { font-size: 19px; max-width: 620px; margin-top: 28px; }
+
+/* header */
+.site-header { position: sticky; top: 0; z-index: 20; background: var(--ivory); border-bottom: 1px solid var(--hair); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 96px; }
+.site-header .logo img { width: 70px; height: auto; }
+.nav { display: flex; gap: 48px; }
+.nav a { position: relative; padding: 6px 0; }
+.nav a.active { color: var(--mauve); }
+.nav a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1px; background: var(--hair); }
+.nav a:hover { color: var(--mauve); }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; gap: 14px; border: 1.5px solid var(--ink); border-radius: 999px; padding: 16px 36px; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; transition: background .25s, color .25s; cursor: pointer; background: transparent; color: var(--ink); font-family: var(--sans); font-weight: 300; }
+.btn:hover, .btn.filled { background: var(--ink); color: var(--ivory); }
+.btn.filled:hover { background: transparent; color: var(--ink); }
+.btn.big { font-family: var(--serif); font-weight: 200; font-size: 36px; letter-spacing: 0; text-transform: none; padding: 20px 48px; }
+
+/* sections */
+.hero { padding: 104px 0 80px; }
+.block { padding: 56px 0 72px; border-top: 1px solid var(--hair); }
+.footer { border-top: 1px solid var(--hair); padding: 40px 0 56px; margin-top: 40px; }
+.footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+/* home */
+.home { text-align: center; padding: 96px 0 120px; }
+.home .script { font-size: clamp(56px, 7vw, 96px); line-height: 1; margin-top: -0.25em; display: block; }
+.home .lede { margin: 40px auto 0; }
+.home .buttons { display: flex; justify-content: center; gap: 28px; margin-top: 64px; flex-wrap: wrap; }
+
+/* branding */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.split img { width: 100%; aspect-ratio: 520 / 440; object-fit: cover; }
+.logos { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
+.logo-box { aspect-ratio: 580 / 320; display: grid; place-items: center; border: 1px solid var(--mist); }
+.logo-box img { width: 46%; }
+.logo-box.ink { background: var(--ink); border-color: var(--ink); }
+.caption { margin-top: 18px; }
+.swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; margin-top: 48px; }
+.swatch .chip { aspect-ratio: 1; }
+.swatch .chip.line { border: 1px solid var(--mist); }
+.swatch p { margin-top: 18px; }
+.swatch .label { display: block; margin-top: 6px; }
+.types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 40px; align-items: end; }
+.types .aa { font-size: clamp(110px, 12vw, 170px); line-height: 1; }
+.types .aa.sans { font-family: var(--sans); font-weight: 300; }
+.types .aa.script { font-size: clamp(100px, 10vw, 150px); }
+.types .label { display: block; margin-top: 22px; }
+.photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+.photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.voice { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 40px; font-family: var(--serif); font-weight: 200; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.2; }
+
+/* banners */
+.line-title { margin: 8px 0 40px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px 24px; }
+.card button.thumb { all: unset; cursor: zoom-in; display: block; width: 100%; }
+.card img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: opacity .25s; }
+.card button.thumb:hover img { opacity: .9; }
+.card .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; gap: 16px; }
+.card .meta .links { display: flex; gap: 28px; }
+.card .meta a, .card .meta button { all: unset; cursor: pointer; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; }
+.card .title { font-family: var(--serif); font-weight: 200; font-size: 24px; margin-top: 6px; }
+
+/* lightbox */
+.lightbox { position: fixed; inset: 0; background: rgba(42, 47, 54, 0.96); color: var(--ivory); display: none; z-index: 50; }
+.lightbox.open { display: grid; grid-template-columns: 1fr minmax(0, 720px) 1fr; align-items: center; gap: 32px; padding: 72px var(--pad); }
+.lightbox img { width: 100%; max-height: 82vh; object-fit: contain; }
+.lightbox .side { align-self: start; padding-top: 12px; }
+.lightbox .side h3 { font-family: var(--serif); font-weight: 200; font-size: 30px; line-height: 1.15; }
+.lightbox .side .label { display: block; margin: 12px 0 28px; color: var(--silver); }
+.lightbox .btn { border-color: var(--ivory); color: var(--ivory); }
+.lightbox .btn:hover { background: var(--ivory); color: var(--ink); }
+.lightbox .ctrl { all: unset; cursor: pointer; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ivory); }
+.lightbox .close { position: absolute; top: 32px; right: var(--pad); }
+.lightbox .prev { justify-self: start; }
+.lightbox .next { position: absolute; right: var(--pad); top: 50%; }
+
+/* website preview */
+.browser { margin-top: 56px; border: 1px solid var(--mist); border-radius: 14px; overflow: hidden; background: var(--ivory); }
+.browser .bar { height: 44px; background: #F2F2F2; display: flex; align-items: center; gap: 8px; padding: 0 20px; position: relative; }
+.browser .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--mist); }
+.browser .url { position: absolute; left: 50%; transform: translateX(-50%); width: min(360px, 50%); height: 26px; border-radius: 13px; background: var(--ivory); font-size: 12px; color: var(--silver); display: grid; place-items: center; }
+.browser .viewport { position: relative; height: min(78vh, 900px); overflow: hidden; }
+.browser iframe { position: absolute; top: 0; left: 0; width: 1440px; border: 0; transform-origin: 0 0; }
+.btn { white-space: nowrap; }
+
+/* responsive */
+@media (max-width: 900px) {
+  .split, .logos { grid-template-columns: 1fr; }
+  .swatches { grid-template-columns: repeat(3, 1fr); }
+  .types, .voice { grid-template-columns: 1fr; }
+  .photos { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .lightbox.open { grid-template-columns: 1fr; align-content: center; }
+  .lightbox .prev, .lightbox .next { display: none; }
+}
+@media (max-width: 600px) {
+  .site-header .wrap { height: 76px; }
+  .site-header .logo img { width: 56px; }
+  .nav { gap: 20px; }
+  .nav a { font-size: 11px; }
+  .grid { grid-template-columns: 1fr; }
+  .btn.big { font-size: 28px; padding: 16px 36px; }
+}
