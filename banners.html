@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banners · Gayla Wigs Creative Direction</title>
+  <!-- Adobe Fonts (IvyJournal): replace KIT_ID with the kit ID and uncomment -->
+  <!-- <link rel="stylesheet" href="https://use.typekit.net/KIT_ID.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/logo-ink.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="Gayla Wigs, home"><img src="/assets/img/logo-ink.png" alt="Gayla Wigs"></a>
+      <nav class="nav label">
+        <a href="/branding">Branding</a>
+        <a href="/banners" class="active">Banners</a>
+        <a href="/website">Website</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="label">02 · Banners</p>
+        <h1 class="page" style="margin-top:28px">Campaign banners.</h1>
+        <p class="lede" style="max-width:760px">Ten square ads (1080 × 1080) for Meta and Google, in two lines: Exhibited, which shows the wigs in full, and Privacy &amp; Confidence, for clients living with hair loss. Click a banner to view it large or download it.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <p class="label line-title">Line A · Exhibited</p>
+        <div class="grid" id="line-a"></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <p class="label line-title">Line B · Privacy &amp; Confidence</p>
+        <div class="grid" id="line-b"></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <p class="label">Next</p>
+        <p style="margin-top:14px;max-width:720px">Each banner will be adapted to 4:5, 9:16 Stories/Reels and Google 1.91:1, keeping the safe zones.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Banner preview">
+    <button class="ctrl close label" id="lb-close">Close ✕</button>
+    <button class="ctrl prev label" id="lb-prev">← Previous</button>
+    <img id="lb-img" alt="">
+    <div class="side">
+      <h3 id="lb-title"></h3>
+      <span class="label">1080 × 1080 · PNG</span>
+      <a class="btn" id="lb-download" download>Download PNG</a>
+    </div>
+    <button class="ctrl next label" id="lb-next">Next →</button>
+  </div>
+
+  <footer class="footer label">
+    <div class="wrap"><span>Gayla Wigs · The Woodlands, TX</span><span>Brand &amp; campaign presentation · First version</span></div>
+  </footer>
+
+  <script src="/assets/js/banners.js"></script>
+</body>
+</html>

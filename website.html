@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website · Gayla Wigs Creative Direction</title>
+  <!-- Adobe Fonts (IvyJournal): replace KIT_ID with the kit ID and uncomment -->
+  <!-- <link rel="stylesheet" href="https://use.typekit.net/KIT_ID.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/logo-ink.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="Gayla Wigs, home"><img src="/assets/img/logo-ink.png" alt="Gayla Wigs"></a>
+      <nav class="nav label">
+        <a href="/branding">Branding</a>
+        <a href="/banners">Banners</a>
+        <a href="/website" class="active">Website</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:40px">
+      <div class="wrap">
+        <p class="label">03 · Website</p>
+        <h1 class="page" style="margin-top:28px">Website concept.</h1>
+        <p class="lede">A first look at a new Gayla Wigs homepage built on the same system. Scroll the preview, or open it full screen.</p>
+        <p style="margin-top:36px"><a class="btn filled" href="/landing" target="_blank" rel="noopener">Open full page</a></p>
+        <div class="browser">
+          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">gaylawigs.com</span></div>
+          <div class="viewport"><iframe src="/landing" title="Gayla Wigs homepage concept" loading="lazy"></iframe></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Show the homepage at desktop width (1440px), scaled to fit the frame.
+    const vp = document.querySelector('.browser .viewport');
+    const fr = vp.querySelector('iframe');
+    function fit() {
+      const s = vp.clientWidth / 1440;
+      fr.style.transform = `scale(${s})`;
+      fr.style.height = (vp.clientHeight / s) + 'px';
+    }
+    fit();
+    addEventListener('resize', fit);
+  </script>
+
+  <footer class="footer label">
+    <div class="wrap"><span>Gayla Wigs · The Woodlands, TX</span><span>Brand &amp; campaign presentation · First version</span></div>
+  </footer>
+</body>
+</html>
